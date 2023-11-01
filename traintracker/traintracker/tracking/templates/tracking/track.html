@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Информация о трекере</title>
+</head>
+<body>
+    <h1>Информация о трекере {{ tracker.tracker_id }}</h1>
+    <p>Широта: {{ tracker.lat }}</p>
+    <p>Долгота: {{ tracker.lng }}</p>
+    <p>Местоположение: {{ location_name }}</p>
+    <p>Статус: {{ tracker.status }}</p>
+    <a href="{% url 'map_view' tracker_id=tracker.tracker_id %}">Посмотреть на карте</a>
+</body>
+</html>
